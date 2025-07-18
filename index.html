@@ -20,23 +20,46 @@
       }
 
       .einladung {
-        background-color: white;
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 800px;
-        text-align: center;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        background: repeating-linear-gradient(
+          #fffde5,
+          #fffde5 28px,
+          #e8e4d9 29px
+        ); /* hellgelbes Papier */
+        border-left: 6px solid #999;
+        padding: 40px 40px 40px 60px;
+        max-width: 650px;
+        font-family: "Segoe Print", cursive; /* sieht handschriftlich aus */
+        position: relative;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+      }
+
+      /* Spiralbindung simulieren */
+      .einladung::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        height: calc(100% - 40px);
+        width: 10px;
+        background: repeating-radial-gradient(
+          circle,
+          #bbb 0,
+          #bbb 3px,
+          transparent 4px,
+          transparent 30px
+        );
       }
       h1 {
         color: darkgreen;
-        font-size: 1.8em;
+        font-size: 1.7em;
       }
       p {
         font-size: 1.2em;
         color: #333;
       }
       .einladung-untertitel {
-        font-size: 2em;
+        font-size: 1.6em;
       }
       hr {
         border: none;
@@ -49,9 +72,9 @@
   </head>
   <body>
     <div class="einladung">
-      <h1>🕵️‍♂️ Einladung zu meinem 9. Geburtstag! 🧪</h1>
-      <p class="einladung-untertitel">Tatort Giftkammer</p>
-      <p>Das Abenteuer von JBL geht weitrer:</p>
+      <h1>Einladung zu meiner Geburtstagsfeier</h1>
+      <p class="einladung-untertitel">🕵️‍♂️ Tatort Giftkammer 🧪</p>
+      <p>Das Abenteuer von JBL geht weitrer ...</p>
       <p>
         Wir gehen gemeinsam ins Museum und lösen einen spannenden Fall als echte
         Detektive!
@@ -65,17 +88,17 @@
           Brunswiker Straße 2, 24105 Kiel
         </a>
       </p>
-      <p>Ich freue mich auf dich!</p>
+      <p>Ich freue mich auf dich! 😊</p>
       <p>
-        PS: Wenn es gutes Wetter ist, denn könnt ihr Badesache mitbringen. Und
+        PS: Wenn es gutes Wetter ist, denn könnt ihr Badesachen mitbringen. Und
         wenn ihr mir eine Freude machen wollt, dann schenkt mir gern einen
         <a
           target="_blank"
           href="https://www.amazon.de/Amazon-Gift-Card-Flower-Bouquet-Print/dp/B00A3TCFD8/ref=sr_1_3?adgrpid=78103245495&dib=eyJ2IjoiMSJ9.y_34xELSyDtmbBjgVWsh7_WkjXU3LonSIQZWSNkeOBEzSU3jWSY2-OdKnN-43TazX4uuN6KnmhfG9TqObMGngpD_HJ9vT6CGmL28Y4uln7D9-vbMuLt5DicLYOYRjvJpprFRbUBucjvrRRaN4ofOiIdhNEHaxnq69xOHNsFM1Co0uhv9T5kU_2zfPsQwF6NGccv8O9xmif1OI7H6IP9MzxFejjckMhf8PpoHEdlQFlT5Ng01-bh7qJ9U-Sf5OUX1447vLb2bg-p5u6ugpNXMSsjkfqE9JTQ3EzlDjCLLSy0.nI2mDXM-6Cf5dNsOgNozv2w4iobeY1SdohnasH_MZ0A&dib_tag=se&hvadid=676548292984&hvdev=c&hvexpln=0&hvlocphy=9116740&hvnetw=g&hvocijid=9680992963044916206--&hvqmt=e&hvrand=9680992963044916206&hvtargid=kwd-813167823489&hydadcr=442_2690715&keywords=amazon+-+gutschein&mcid=94088767fd753957ac120f234e5e2489&qid=1752864211&sr=8-3"
           >Amazon Gutschein</a
-        >
+        >🎁
       </p>
-      <p><strong>Ganz wichtig: Brint eure Kindersitze mit!</strong></p>
+      <p><strong>Ganz wichtig: Bringt eure Kindersitze mit!</strong></p>
     </div>
   </body>
 </html>
