@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("background.png");
@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -32,14 +33,11 @@ hr {
 }
 
 .einladung {
-  background: repeating-linear-gradient(
-    #fffde5,
-    #fffde5 28px,
-    #e8e4d9 29px
-  ); /* hellgelbes Papier */
+  background: repeating-linear-gradient(#fffde5, #fffde5 28px, #e8e4d9 29px);
   border-left: 6px solid #999;
   padding: 40px 40px 40px 60px;
   max-width: 800px;
+  width: 100%;
   font-family: "Comic Neue", cursive, "Arial Rounded MT Bold",
     "Helvetica Rounded", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -47,6 +45,7 @@ hr {
   position: relative;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  margin-top: 0;
 }
 
 .einladung::before {
@@ -64,7 +63,6 @@ hr {
     transparent 30px
   );
 }
-
 .einladung-untertitel {
   font-size: 1.6em;
 }
@@ -81,8 +79,8 @@ hr {
 .table-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Abstand zwischen den Zeilen */
-  margin-top: 20px; /* Optional: Abstand nach oben */
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .row {
@@ -92,15 +90,62 @@ hr {
 }
 
 .label {
-  width: 120px; /* Feste Breite für Labels */
+  width: 120px;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .value {
-  flex: 1; /* Wert nimmt verbleibenden Platz */
+  flex: 1;
 }
 
 .label,
 .value {
   font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .einladung {
+    padding: 10px 40px 40px 40px;
+    max-width: 100%;
+  }
+
+  .label {
+    width: auto;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+  }
+
+  .value {
+    font-size: 1em;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .einladung-untertitel {
+    font-size: 1.4em;
+  }
+
+  p,
+  .value,
+  .label {
+    font-size: 1em;
+  }
+
+  .table-container {
+    gap: 10px;
+  }
 }
