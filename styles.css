@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: darkgreen;
+  font-size: 1.7em;
+}
+
+p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background-color: darkgreen;
+  margin: 30px 100px;
+  border-radius: 5px;
+}
+
+.einladung {
+  background: repeating-linear-gradient(
+    #fffde5,
+    #fffde5 28px,
+    #e8e4d9 29px
+  ); /* hellgelbes Papier */
+  border-left: 6px solid #999;
+  padding: 40px 40px 40px 60px;
+  max-width: 800px;
+  font-family: "Comic Neue", cursive, "Arial Rounded MT Bold",
+    "Helvetica Rounded", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.einladung::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  height: calc(100% - 40px);
+  width: 10px;
+  background: repeating-radial-gradient(
+    circle,
+    #bbb 0,
+    #bbb 3px,
+    transparent 4px,
+    transparent 30px
+  );
+}
+
+.einladung-untertitel {
+  font-size: 1.6em;
+}
+
+.hinweis {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.fett {
+  font-weight: 800;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Abstand zwischen den Zeilen */
+  margin-top: 20px; /* Optional: Abstand nach oben */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.label {
+  width: 120px; /* Feste Breite für Labels */
+  font-weight: bold;
+}
+
+.value {
+  flex: 1; /* Wert nimmt verbleibenden Platz */
+}
+
+.label,
+.value {
+  font-size: 1.2em;
+}
